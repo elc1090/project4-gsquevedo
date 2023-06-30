@@ -18,17 +18,17 @@ export default {
     };
   },
   async mounted() {
-    // try {
-    //   const response = await fetch("https://sheetdb.io/api/v1/jvyo4l3l29obu?sheet=pontos");
-    //   if (!response.ok) {
-    //     throw new Error("Erro ao obter os dados da API");
-    //   }
-    //   const data = await response.json();
-    //   this.pontos = data;
-    //   this.map = this.createMap(this.pontos);
-    // } catch (error) {
-    //   console.error(error);
-    // }
+    try {
+      const response = await fetch("https://sheetdb.io/api/v1/jvyo4l3l29obu?sheet=pontos");
+      if (!response.ok) {
+        throw new Error("Erro ao obter os dados da API");
+      }
+      const data = await response.json();
+      this.pontos = data;
+      this.map = this.createMap(this.pontos);
+    } catch (error) {
+      console.error(error);
+    }
 
   },
   methods: {

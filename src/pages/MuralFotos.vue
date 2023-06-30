@@ -83,20 +83,20 @@ export default {
     },
   },
   async mounted() {
-    // try {
-    //   const response = await fetch("https://sheetdb.io/api/v1/jvyo4l3l29obu?sheet=fotos");
-    //   if (!response.ok) {
-    //     throw new Error("Erro ao obter os dados da API");
-    //   }
-    //   const data = await response.json();
-    //   this.photos = data;
-    //   setTimeout(() => {
-    //     this.isLoading = false;
-    //   }, 2000);
-    //   this.map = this.createMap(this.pontos);
-    // } catch (error) {
-    //   console.error(error);
-    // }
+    try {
+      const response = await fetch("https://sheetdb.io/api/v1/jvyo4l3l29obu?sheet=fotos");
+      if (!response.ok) {
+        throw new Error("Erro ao obter os dados da API");
+      }
+      const data = await response.json();
+      this.photos = data;
+      setTimeout(() => {
+        this.isLoading = false;
+      }, 2000);
+      this.map = this.createMap(this.pontos);
+    } catch (error) {
+      console.error(error);
+    }
   },
 };
 </script>

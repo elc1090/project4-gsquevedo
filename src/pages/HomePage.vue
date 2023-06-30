@@ -9,15 +9,35 @@
         </div>
       </div>
       <div class="about">
-        <h2>Sobre</h2>
+        <h2>Apresentação</h2>
         <p>O Jardim Botânico da Universidade Federal de Santa Maria (UFSM) é um espaço dedicado à pesquisa, conservação e educação ambiental. Fundado em 1986, abrange uma área de 13 hectares e possui uma grande diversidade de espécies vegetais nativas e exóticas.</p>
         <p>O jardim oferece uma experiência única para os visitantes, combinando belas paisagens com informações sobre a flora regional e a importância da preservação ambiental.</p>
+        <img src="https://www.ufsm.br/app/uploads/sites/363/2023/06/Sem-nome-1200-%C3%97-444-px-4-1024x325.jpg"/> 
       </div>
       <div class="section">
         <div class="visit">
-          <h2>Visitação</h2>
-          <p>O Jardim Botânico UFSM está aberto ao público de terça-feira a domingo, das 9h às 17h. Durante a visita, os visitantes podem desfrutar de trilhas autoguiadas, áreas de descanso e observação de aves.</p>
-          <p>Para garantir a preservação do ambiente, é solicitado que os visitantes sigam as regras de conduta, como não pisar nas áreas de vegetação e não alimentar os animais.</p>
+          <n-carousel>
+            <img
+              class="carousel-img"
+              src="https://www.ufsm.br/app/uploads/sites/363/2023/06/IMG_7318-272x182.jpg"
+            >
+            <img
+              class="carousel-img"
+              src="https://www.ufsm.br/app/uploads/sites/363/2023/06/IMG_6732-272x182.jpg"
+            >
+            <img
+              class="carousel-img"
+              src="https://www.ufsm.br/app/uploads/sites/363/2023/06/fb5e836e-20cf-480e-9514-134c429925ac-1-272x182.jpg"
+            >
+            <img
+              class="carousel-img"
+              src="https://www.ufsm.br/app/uploads/sites/363/2023/06/ddfb8a6c-7db6-4214-9c6f-cbdfc51e5a11-1-272x182.jpg"
+            >
+            <img
+              class="carousel-img"
+              src="https://www.ufsm.br/app/uploads/sites/363/2023/06/c0cad6ca-4dc3-4d58-a855-3b517ad4a3d2-272x182.jpg"
+            >
+          </n-carousel>
         </div>
         <div class="projects">
           <h2>Projetos</h2>
@@ -35,9 +55,13 @@
 </template>
 
 <script>
+import { NCarousel } from 'naive-ui';
 
 export default {
   name: 'HomePage',
+  components: {
+    NCarousel
+  }
   // Component options
 }
 </script>
@@ -48,8 +72,14 @@ export default {
   padding: 20px;
 }
 
+.carousel-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 .hero {
-  background-color: #449f75;
+  background-color: rgb(69, 161, 118, 0.8);
   color: #ffffff;
   padding: 20px;
   margin-bottom: 20px;
@@ -68,9 +98,13 @@ export default {
   border-radius: 5px;
   width: auto;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-items: center;
+  padding: 10px 80px;
+  font-size: 16px;
 }
 
-.visit, .projects {
+.visit {
   background-color: #ffffff;
   padding: 20px;
   margin-bottom: 20px;
@@ -78,6 +112,39 @@ export default {
   width: 560px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.projects {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.projects h2 {
+  color: #333333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.projects p {
+  color: #666666;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.projects ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #666666;
+  padding-left: 20px;
+}
+
+.projects li {
+  margin-bottom: 5px;
+}
+
 
 h2 {
   color: #333333;
@@ -89,13 +156,14 @@ h2 {
   color: #666666;
   line-height: 1.5;
   margin-bottom: 10px;
-  font-weight: bold;
+  text-align: center;
 }
 
 p {
   color: #666666;
   line-height: 1.5;
   margin-bottom: 10px;
+  text-align: justify;
 }
 
 ul {
