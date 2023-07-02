@@ -5,7 +5,6 @@
         <img src="@/assets/jardim.png" alt="Logo" class="logo" />
       </a>
       <ul class="navbar-items">
-        <li><a href="/predios">Edifícios</a></li>
         <li><a href="/mapa">Espaço Geográfico</a></li>
         <li><a href="/mural">Mural de fotos</a></li>
       </ul>

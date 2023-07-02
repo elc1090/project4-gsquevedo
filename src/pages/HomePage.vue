@@ -16,7 +16,7 @@
       </div>
       <div class="section">
         <div class="visit">
-          <n-carousel>
+          <n-carousel autoplay autoplay-speed="3000">
             <img
               class="carousel-img"
               src="https://www.ufsm.br/app/uploads/sites/363/2023/06/IMG_7318-272x182.jpg"

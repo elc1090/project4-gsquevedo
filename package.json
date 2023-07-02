@@ -13,6 +13,7 @@
     "leaflet-color-markers": "^0.1.0",
     "leaflet-fullscreen": "^1.0.2",
     "leaflet-minimap": "^3.6.1",
+    "leaflet.animatedmarker": "^1.0.0",
     "register-service-worker": "^1.7.2",
     "vue": "^3.2.13",
     "vue-leaflet-minimap": "^1.0.8",

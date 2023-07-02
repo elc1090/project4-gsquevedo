@@ -103,37 +103,31 @@ export default {
 
 
 <style scoped>
-
 .photo-wall {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   padding: 20px;
 }
-
 .search-bar {
   margin: 20px;
   width: auto;
   height: auto;
 }
-
 .photo {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .photo-image {
   width: 100%;
   max-height: 300px;
   object-fit: cover;
 }
-
 .photo-caption {
   margin-top: 10px;
   text-align: center;
 }
-
 .no-photos {
   display: flex;
   padding: 40px;
