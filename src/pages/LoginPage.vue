@@ -67,7 +67,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .container {
   display: flex;
   height: 100vh;
@@ -85,7 +85,7 @@ export default {
 
 .btn-login {
   border-radius: 50px;
-  width: 100%;
+  width: 460px;
   margin-top: 10px;
 }
 

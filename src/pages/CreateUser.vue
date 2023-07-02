@@ -8,21 +8,21 @@
         <div class="form">
           <n-config-provider>
             <n-form>
-              <n-form-item path="user.name" label="Nome">
+              <n-form-item class="item" path="user.name" label="Nome">
                 <n-input placeholder="Informe seu nome" v-model:value="user.name">
                   <template #suffix>
                     <n-icon size="15"> <person-outline/> </n-icon>
                   </template>
                 </n-input>  
               </n-form-item>
-              <n-form-item path="user.email" label="Email">
+              <n-form-item class="item" path="user.email" label="Email">
                 <n-input placeholder="Informe seu email" v-model:value="user.email">
                   <template #suffix>
                     <n-icon size="15"> <mail-outline/> </n-icon>
                   </template>
                 </n-input>
               </n-form-item>
-              <n-form-item path="user.password" label="Senha">
+              <n-form-item class="item" path="user.password" label="Senha">
                 <n-input 
                   type="password"
                   placeholder="Informe sua senha" 
@@ -31,7 +31,7 @@
                 </n-input>
               </n-form-item>
               <div class="btn">
-                <n-button color="#232343" class="btn-login" @click="handleSubmitForm">Criar uma nova conta</n-button>
+                <n-button class="btn-login" @click="handleSubmitForm">Criar uma conta</n-button>
               </div>
             </n-form>
           </n-config-provider>
@@ -41,7 +41,7 @@
   </div>
 </template>
   
-<script>
+<script scoped>
 import axios from "axios";
 import { NConfigProvider, NIcon, NButton, NForm, NInput } from 'naive-ui';
 import { MailOutline, PersonOutline } from '@vicons/ionicons5';
@@ -96,12 +96,11 @@ export default {
   display: flex;
 }
 
-.router-login:hover{
-  color: #232343;
-}
 
 .btn-login {
-  width: 120vh;
+  border-radius: 50px;
+  width: 460px;
+  margin-top: 10px;
 }
 
 .account {
