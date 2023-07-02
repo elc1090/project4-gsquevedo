@@ -77,23 +77,21 @@ export default {
 };
 </script>
 
-<style>
-.link-container {
-  justify-content: center;
-  text-transform: uppercase;
-  display: flex;
-}
+<style scoped>
 .container {
   display: flex;
   height: 100vh;
 }
 
-.router-login {
+.router-user {
   text-decoration: none;
   color: black;
   display: flex;
 }
 
+.form-item{
+  margin-bottom: 10px;
+}
 
 .btn-login {
   border-radius: 50px;
@@ -115,13 +113,13 @@ export default {
 }
 
 .layout-right {
-  background-color:rgba(234, 234, 234, 1);
+  background-color: rgba(234, 234, 234, 1);
   flex-direction: column;
 }
 
 .logo {
   margin-bottom: 10px;
-  display: flex; 
+  display: flex;
   justify-content: center;
 }
 
@@ -135,15 +133,11 @@ export default {
   background-color: rgba(255, 255, 255, 0.4);
   padding: 30px;
   align-items: center;
+  width: 500px;
 }
 
 .ref-label{
   color: #717984;
-  text-decoration: none;
-}
-
-.ref-label:hover{
-  color: #232343;
   text-decoration: none;
 }
 </style>
