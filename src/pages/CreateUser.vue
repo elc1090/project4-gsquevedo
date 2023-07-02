@@ -68,7 +68,7 @@ export default {
   },
   methods: {
     async handleSubmitForm() {
-      let apiURL = 'http://localhost:4000/api/create-user';
+      let apiURL = 'https://project4-gsquevedo-backend.vercel.app/api/create-user';
 
       const { data } = await axios.post(apiURL, this.user);
       if(data) {  
