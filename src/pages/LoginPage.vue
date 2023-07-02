@@ -56,7 +56,7 @@ export default {
   },
   methods: {
     async handleSubmitForm() {
-      let apiURL = 'https://project4-gsquevedo-backend.vercel.app/api/login';
+      let apiURL = 'https://project4-gsquevedo-api.vercel.app/api/login';
                 
       axios.post(apiURL, this.user).then(() => {
         this.$router.push('/home')
