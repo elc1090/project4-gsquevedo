@@ -7,6 +7,7 @@
       <ul class="navbar-items">
         <li><a href="/mapa">Espaço Geográfico</a></li>
         <li><a href="/mural">Mural de fotos</a></li>
+        <li><a href="/">Sair</a></li>
       </ul>
     </nav>
   </div>
