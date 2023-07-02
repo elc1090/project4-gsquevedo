@@ -1,7 +1,7 @@
 <template>
   <div id="navbar">
     <nav>
-      <a href="/">
+      <a href="/home">
         <img src="@/assets/jardim.png" alt="Logo" class="logo" />
       </a>
       <ul class="navbar-items">

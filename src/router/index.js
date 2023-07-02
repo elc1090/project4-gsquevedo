@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import MuralFotos from '@/pages/MuralFotos.vue'
 import MapPage from '@/pages/MapPage.vue'
-import EdificacaoJardim from '@/pages/EdificacaoJardim.vue'
 import HomePage from '@/pages/HomePage.vue'
+import LoginPage from '@/pages/LoginPage.vue'
+import CreateUser from '@/pages/CreateUser.vue'
 
 const routes = [
   {
@@ -16,14 +17,19 @@ const routes = [
     component: MapPage
   },
   {
-    path: '/predios',
-    name: 'Edificacao',
-    component: EdificacaoJardim
+    path: '/home',
+    name: 'Home',
+    component: HomePage
+  },
+  {
+    path: '/create',
+    name: 'Create',
+    component: CreateUser
   },
   {
     path: '/',
-    name: 'Home',
-    component: HomePage
+    name: 'Login',
+    component: LoginPage
   }
 ]
 

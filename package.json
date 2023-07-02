@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@vicons/ionicons5": "^0.12.0",
+    "axios": "^1.4.0",
     "core-js": "^3.8.3",
     "leaflet-color-markers": "^0.1.0",
     "leaflet-fullscreen": "^1.0.2",

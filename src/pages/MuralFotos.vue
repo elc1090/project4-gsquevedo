@@ -1,4 +1,5 @@
 <template>
+  <nav-bar/>
   <div>
     <div class="search-bar">
       <n-space vertical>
@@ -27,12 +28,15 @@
       </n-card>
     </div>
   </div>
+  <footer-page/>
 </template>
 
 <script>
 import { NInput, NIcon, NCard, NTabs, NTabPane, NSpace } from 'naive-ui'
 import { SearchSharp } from '@vicons/ionicons5';
 import { ref } from 'vue'
+import FooterPage from '@/components/FooterPage.vue';
+import NavBar from '@/components/NavBar.vue';
 
 export default {
   components: {
@@ -43,6 +47,8 @@ export default {
     SearchSharp,
     NInput,
     NSpace,
+    FooterPage,
+    NavBar
   },
   data() {
     const photos = ref([{ categoria: '', url: ''}])

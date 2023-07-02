@@ -1,4 +1,5 @@
 <template>
+  <nav-bar/>
   <div class="home">
     <main>
       <div class="hero">
@@ -52,17 +53,21 @@
       </div> 
     </main>
   </div>
+  <footer-page/>
 </template>
 
 <script>
 import { NCarousel } from 'naive-ui';
+import NavBar from '@/components/NavBar.vue';
+import FooterPage from '@/components/FooterPage.vue';
 
 export default {
   name: 'HomePage',
   components: {
-    NCarousel
+    NCarousel,
+    NavBar,
+    FooterPage
   }
-  // Component options
 }
 </script>
 
