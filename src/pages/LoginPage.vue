@@ -22,7 +22,7 @@
                 v-model:value="user.password">
               </n-input>
             </n-form-item>
-            <!-- <n-button class="btn-login" @click="handleSubmitForm">Acessar uma conta</n-button> -->
+            <n-button class="btn-login" @click="handleSubmitForm">Acessar uma conta</n-button>
           </n-form>
         </n-config-provider>
       </div>
@@ -57,12 +57,11 @@ export default {
   methods: {
     async handleSubmitForm() {
       let apiURL = 'https://project4-gsquevedo-api.vercel.app/api/login';
-                
-      axios.post(apiURL, this.user).then(() => {
+
+      const { data } = await axios.post(apiURL, this.user);
+      if(data){
         this.$router.push('/home')
-      }).catch(error => {
-          console.log(error)
-      });
+      }
     }
   }
 };
