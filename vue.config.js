@@ -3,7 +3,7 @@ module.exports = defineConfig({
   transpileDependencies: true,
   pwa : { 
     name : "Jardim Botânico" , 
-    themeColor : "#ffd100",
+    themeColor : "#448a4e",
     icons: {
       favicon32 : 'img/icons/jardim.png' , 
       favicon16 : 'img/icons/jardim.png' , 
