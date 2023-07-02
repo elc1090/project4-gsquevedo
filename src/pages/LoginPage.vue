@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <div class="layout-right">
-      <h1>TESTE</h1>
       <div class="login">
         <div class="logo">
           <img src="@/assets/jardim.png" alt="Logo" class="logo" />
@@ -23,7 +22,7 @@
                 v-model:value="user.password">
               </n-input>
             </n-form-item>
-            <n-button class="btn-login" @click="handleSubmitForm">Acessar uma conta</n-button>
+            <!-- <n-button class="btn-login" @click="handleSubmitForm">Acessar uma conta</n-button> -->
           </n-form>
         </n-config-provider>
       </div>
