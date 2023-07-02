@@ -1,24 +1,22 @@
-# jardim-botanico-pwa
+![screen](screen.png)
 
-## Project setup
-```
-npm install
-```
+# Jardim Botânico UFSM
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Desenvolvedor(a)
+Gabriele Soares Quevedo
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Bastidores
+- Dificuldades com deploy
+- Aprendizado com mapa
+- Acesso aos dados
+- Muitas libs ligado no Vue Leaflet
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Tecnologias
+- Vue
+- Vercel
+- Naive Ui
+- Node
+- MongoDB
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Link de acesso
+https://project4-gsquevedo.vercel.app/
