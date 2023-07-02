@@ -5,37 +5,35 @@
         <div class="logo">
           <img src="@/assets/jardim.png" alt="Logo" class="logo" />
         </div>
-        <div class="form">
-          <n-config-provider>
-            <n-form>
-              <n-form-item class="item" path="user.name" label="Nome">
-                <n-input placeholder="Informe seu nome" v-model:value="user.name">
-                  <template #suffix>
-                    <n-icon size="15"> <person-outline/> </n-icon>
-                  </template>
-                </n-input>  
-              </n-form-item>
-              <n-form-item class="item" path="user.email" label="Email">
-                <n-input placeholder="Informe seu email" v-model:value="user.email">
-                  <template #suffix>
-                    <n-icon size="15"> <mail-outline/> </n-icon>
-                  </template>
-                </n-input>
-              </n-form-item>
-              <n-form-item class="item" path="user.password" label="Senha">
-                <n-input 
-                  type="password"
-                  placeholder="Informe sua senha" 
-                  show-password-on="click"
-                  v-model:value="user.password">
-                </n-input>
-              </n-form-item>
-              <div class="btn">
-                <n-button class="btn-login" @click="handleSubmitForm">Criar uma conta</n-button>
-              </div>
-            </n-form>
-          </n-config-provider>
-        </div>
+        <n-config-provider>
+          <n-form class="form">
+            <n-form-item class="item" path="user.name" label="Nome">
+              <n-input placeholder="Informe seu nome" v-model:value="user.name">
+                <template #suffix>
+                  <n-icon size="15"> <person-outline/> </n-icon>
+                </template>
+              </n-input>  
+            </n-form-item>
+            <n-form-item class="item" path="user.email" label="Email">
+              <n-input placeholder="Informe seu email" v-model:value="user.email">
+                <template #suffix>
+                  <n-icon size="15"> <mail-outline/> </n-icon>
+                </template>
+              </n-input>
+            </n-form-item>
+            <n-form-item class="item" path="user.password" label="Senha">
+              <n-input 
+                type="password"
+                placeholder="Informe sua senha" 
+                show-password-on="click"
+                v-model:value="user.password">
+              </n-input>
+            </n-form-item>
+            <div class="btn">
+              <n-button class="btn-login" @click="handleSubmitForm">Criar uma conta</n-button>
+            </div>
+          </n-form>
+        </n-config-provider>
       </div>
     </div>
   </div>
