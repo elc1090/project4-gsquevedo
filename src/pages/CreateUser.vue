@@ -29,9 +29,8 @@
                 v-model:value="user.password">
               </n-input>
             </n-form-item>
-            <div class="btn">
-              <n-button class="btn-login" @click="handleSubmitForm">Criar uma conta</n-button>
-            </div>
+            <n-button class="btn-login" @click="handleSubmitForm">Criar uma conta</n-button>
+            <a class="create" href="/" style="color: #6a9a69; text-decoration: none;">Acessar conta</a>
           </n-form>
         </n-config-provider>
       </div>
@@ -41,7 +40,7 @@
   
 <script scoped>
 import axios from "axios";
-import { NConfigProvider, NIcon, NButton, NForm, NInput } from 'naive-ui';
+import { NConfigProvider, NIcon, NButton, NForm, NInput, NFormItem } from 'naive-ui';
 import { MailOutline, PersonOutline } from '@vicons/ionicons5';
 
 export default {
@@ -52,7 +51,8 @@ export default {
     NConfigProvider,
     NButton,
     NForm,
-    NInput
+    NInput,
+    NFormItem
   },
   data() {
     const user = {
@@ -139,5 +139,9 @@ export default {
 .ref-label{
   color: #717984;
   text-decoration: none;
+}
+
+.create {
+  margin-top: 10px;
 }
 </style>

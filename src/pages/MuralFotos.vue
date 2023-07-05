@@ -11,12 +11,13 @@
       </n-space>
     </div>
     <div class="card-container">
-      <n-card title="">
+      <n-card title="" class="fade-in">
         <n-tabs type="line" animated v-model:selectedTab="selectedTab">
           <n-tab-pane v-for="(tab, index) in tabs" :key="index" :name="tab.name" :tab="tab.tab">
             <div class="photo-wall">
-              <div v-if="filteredPhotosByTab(tab).length === 0">
-                <div class="no-photos">Não há fotos</div>
+              <div v-if="filteredPhotosByTab(tab).length === 0" class="no-photos">
+                <n-icon size="150"><image-outline/></n-icon>
+                <div>Não há fotos</div>
               </div>
               <div v-else v-for="(photo, index) in filteredPhotosByTab(tab)" :key="index" class="photo">
                 <img :src="photo.url" :alt="photo.categoria" class="photo-image" />
@@ -33,7 +34,7 @@
 
 <script>
 import { NInput, NIcon, NCard, NTabs, NTabPane, NSpace } from 'naive-ui'
-import { SearchSharp } from '@vicons/ionicons5';
+import { SearchSharp, ImageOutline } from '@vicons/ionicons5';
 import { ref } from 'vue'
 import FooterPage from '@/components/FooterPage.vue';
 import NavBar from '@/components/NavBar.vue';
@@ -45,6 +46,7 @@ export default {
     NTabPane,
     NIcon,
     SearchSharp,
+    ImageOutline,
     NInput,
     NSpace,
     FooterPage,
@@ -107,7 +109,6 @@ export default {
 };
 </script>
 
-
 <style scoped>
 .photo-wall {
   display: grid;
@@ -136,9 +137,12 @@ export default {
 }
 .no-photos {
   display: flex;
-  padding: 40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
+  width: 100vw;
   font-size: 20px;
-  color: black;
+  color: gray;
 }
 </style>

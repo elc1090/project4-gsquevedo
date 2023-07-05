@@ -14,6 +14,7 @@
                 </template>
               </n-input>
             </n-form-item>
+            <p v-if="errorMessage" class="error-message">{{ errorMessage }}</p>
             <n-form-item class="form-item" path="user.password" label="Senha">
               <n-input 
                 type="password"
@@ -23,6 +24,8 @@
               </n-input>
             </n-form-item>
             <n-button class="btn-login" @click="handleSubmitForm">Acessar uma conta</n-button>
+            <a class="create" href="/create" style="color: #6a9a69; text-decoration: none;">Criar conta</a>
+            
           </n-form>
         </n-config-provider>
       </div>
@@ -32,7 +35,7 @@
 
 <script>
 import axios from "axios";
-import { NConfigProvider, NIcon, NButton, NForm, NInput } from 'naive-ui';
+import { NConfigProvider, NIcon, NButton, NForm, NInput, NFormItem } from 'naive-ui';
 import { MailOutline } from '@vicons/ionicons5';
 
 export default {
@@ -42,7 +45,8 @@ export default {
     NConfigProvider,
     NButton,
     NForm,
-    NInput
+    NInput,
+    NFormItem
   },
   data() {
     const user = {
@@ -52,16 +56,21 @@ export default {
 
     return {
       user,
+      errorMessage: '',
     };
   },
   methods: {
     async handleSubmitForm() {
       let apiURL = 'https://project4-gsquevedo-api.vercel.app/api/login';
 
-      const { data } = await axios.post(apiURL, this.user);
-      if(data){
-        this.$router.push('/home')
-      }
+      try {
+        const { data } = await axios.post(apiURL, this.user);
+        if(data){
+          this.$router.push('/home')
+        }
+      } catch (error) {
+        this.errorMessage = error.response.data.error;
+      }      
     }
   }
 };
@@ -79,14 +88,9 @@ export default {
   display: flex;
 }
 
-.form-item{
-  margin-bottom: 10px;
-}
-
 .btn-login {
   border-radius: 50px;
   width: 460px;
-  margin-top: 10px;
 }
 
 .account {
@@ -129,5 +133,13 @@ export default {
 .ref-label{
   color: #717984;
   text-decoration: none;
+}
+
+.create {
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
 }
 </style>

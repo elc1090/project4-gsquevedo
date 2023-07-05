@@ -14,6 +14,11 @@
           </n-icon>
           <n-icon size="40" v-if="c.contato === 'site'">
             <globe/>
+          </n-icon>  
+        </a>
+        <a href="https://www.ufsm.br/orgaos-suplementares/jardim-botanico/agendamentos" class="icon-link">
+          <n-icon size="40">
+            <calendar-number-outline/>
           </n-icon>
         </a>
       </div>
@@ -31,7 +36,7 @@
 </template>
 <script>
 import { NIcon } from 'naive-ui';
-import { LogoFacebook, LogoInstagram, LogoYoutube, Globe } from '@vicons/ionicons5';
+import { LogoFacebook, LogoInstagram, LogoYoutube, Globe, CalendarNumberOutline } from '@vicons/ionicons5';
 
 export default {
   components: {
@@ -39,7 +44,8 @@ export default {
     LogoFacebook,
     LogoInstagram,
     Globe,
-    LogoYoutube
+    LogoYoutube,
+    CalendarNumberOutline
   },
   data() {
     return {
@@ -63,8 +69,8 @@ export default {
 
 <style>
 .footer {
-  background-color: #448a4e;
-  padding: 10px;
+  background-color: #6a9a69;
+  padding: 5px;
 }
 
 .footer-content {
@@ -89,7 +95,7 @@ export default {
 .contatos {
   display: flex;
   flex-direction: column;
-  margin-left: 10px;
+  margin-left: 20px;
   color: #fff;
 }
 

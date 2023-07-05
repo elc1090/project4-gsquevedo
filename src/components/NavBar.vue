@@ -7,15 +7,29 @@
       <ul class="navbar-items">
         <li><a href="/mapa">Espaço Geográfico</a></li>
         <li><a href="/mural">Mural de fotos</a></li>
-        <li><a href="/">Sair</a></li>
+        <li><a href="/"><n-icon size="25"> <log-out/> </n-icon></a></li>
       </ul>
     </nav>
   </div>
 </template>
+<script>
+import { NIcon} from 'naive-ui'
 
+import { LogOut } from '@vicons/ionicons5';
+
+export default {
+  components: {
+    NIcon,
+    LogOut
+  },
+  setup() {
+    
+  },
+}
+</script>
 <style>
 #navbar {
-  background-color: #448a4e;
+  background-color: #6a9a69;
   padding: 15px;
 }
 
